@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>09-exercises</title>
+      
+  </head>
+  <body>
+    <button>9a</button>
+    <p>
+      <button class ="js-button">9b</button>
+    </p>
+    <button onclick="chose('heads')">heads</button>
+    <button onclick="chose('tails')">tails</button>
+    <p class="js-chose"></p>
+    <p><input placeholder="Name";
+       onkeydown = "handleCostKeyDown(event)"
+      class="js-name-input"
+     >
+      <button onclick="nameText()
+      ">Submit</button>
+    
+    </p>
+    <p class="js-text"></p>
+    
+   <script>
+    console.log(document.querySelector('button').innerHTML)
+    document.querySelector('.js-button').innerHTML='9b done!';
+    
+    function chose(chose){
+     /* if(chose==='heads'){
+      document.querySelector('.js-chose').innerHTML=`you chose:heads`;
+      }else if(chose==='tails'){
+        document.querySelector('.js-chose').innerHTML=`you chose:tails`
+      }*/
+      document.querySelector('.js-chose').innerHTML=`you chose:${chose}`
+    }
+    function nameText(){
+
+      const name1=document.querySelector('.js-name-input')
+      let name2=name1.value
+      console.log(name2)
+      document.querySelector('.js-text').innerHTML=`your name is:${name2}`
+    }
+    function handleCostKeyDown(event){
+       if (event.key==='Enter'){
+        nameText()}
+    }
+
+   </script>
+  </body>
+</html>

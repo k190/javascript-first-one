@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cart quantity</title>
+      
+  </head>
+  <body>
+    <button onclick =
+      "desplaying();
+      ">show Quantity
+    </button>
+    
+    <button onclick="  updateCartQuantity(1);">Add to cart
+    </button>
+
+
+    <button onclick="
+    updateCartQuantity(3);">+3 </button>
+
+    <button onclick=" updateCartQuantity(5)  ;">+5</button>
+
+    <button onclick="
+     updateCartQuantity(-2);">-2</button>
+
+    <button onclick="  updateCartQuantity(-3); ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;
+      desplaying();
+   
+      
+      
+      ">Reset Cart
+    </button>
+    <p class =" js-desplay"></p>
+
+    <script>
+      function updateCartQuantity(value){
+        if (cartQuantity+value>10){
+          alert('The cart is full');
+          return;
+        }else if(cartQuantity+value<0){
+          alert('Not enough items in the cart');
+          return;
+        }
+          cartQuantity+=value;
+         /* console.log(`cart quntity:${cartQuantity}`);
+          const element12=`cart quntity:${cartQuantity}` 
+          document.querySelector('.js-desplay').innerHTML=element12;*/
+          desplaying();
+        }
+      function desplaying(){
+        const element12=`cart quntity:${cartQuantity}` 
+          document.querySelector('.js-desplay').innerHTML=element12;
+      }
+     let cartQuantity = 0;
+     desplaying();
+   
+     const variable2= 3;
+    </script>
+  </body>
+</html>

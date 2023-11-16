@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>06-exercises</title>
+      
+  </head>
+  <body>
+    
+
+   <script>
+      const hour = 15;
+      const name='Kaleab';
+      const isholiday=false;//6e
+      const randomNumber=Math.random();//6f
+      let result='';//6h
+      const guess='heads';
+     if(hour>6 && hour<12){
+        console.log(`good morning! ${name}`);
+       }
+     else if(hour>13 && hour<17){
+        console.log(`good afternoon!${name}`);
+      }
+      else{
+        console.log(`good night!${name}`);
+      }//from a-c
+      const age=5;
+      if( !isholiday && (age>65||age<6)){
+        console.log('discount')
+      }
+      else{
+        console.log('no discount')
+      }//6d
+      /*if(randomNumber<0.5){
+        console.log('heads')
+        result='heads';//6h
+      }
+      else{
+        console.log('tais')
+        result='tais';//6h
+      }
+      if(result===guess){
+        console.log('you win')
+      }
+      else{
+        console.log('you lose!')
+      }*/
+      randomNumber<0.5? result='heads':result='tais'
+      console.log(guess===result?'you win!':'you loss!');
+
+   </script>
+  </body>
+</html>

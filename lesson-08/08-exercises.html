@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>08-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    const product1={
+      name:'basketball',
+      price:2095
+
+    }
+    product1.price+=500;
+    console.log(product1)
+    product1['delivery-time']='3 days';
+    console.log(product1);
+     function comparePrice(product2,product3){
+      if (product2.price<product3.price){
+       return product2;
+      }else{
+        return product3;
+      }}
+      const product2={
+        name:'isecrame',
+        price:30
+      };
+      const product3={
+        name:'tefe',
+        price:200
+      };
+     console.log(comparePrice(product2,product3));
+     function isSameProduct(product4,product5){
+      if(
+        product4.name===product5.name&&
+      product5.price===product5.price
+      ){
+      return true;
+      }else{ 
+       return false;
+
+      }
+     }
+
+     
+     const product4={
+      name:'socs',
+      price:20
+    };
+    const product5={
+      name:'socs',
+      price:20
+    };
+    console.log(isSameProduct(product4,product5))
+    let uppercaseString="GOOD Morning";
+    let lowercaseString=uppercaseString.toLowerCase();
+    console.log(lowercaseString);
+    console.log('HELLO'.toLowerCase())
+    console.log('test'.repeat(3))
+   </script>
+  </body>
+</html>

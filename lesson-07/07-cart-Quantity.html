@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cart quantity</title>
+      
+  </head>
+  <body>
+    <button onclick =
+      "console.log(`Cart quantity: ${cartQuantity}`);">show Quantity
+    </button>
+    
+    <button onclick="  updateCartQuantity(1);">Add to cart
+    </button>
+
+
+    <button onclick="
+    updateCartQuantity(3);">+3 </button>
+
+    <button onclick=" updateCartQuantity(5)  ;">+5</button>
+
+    <button onclick="
+     updateCartQuantity(-2);">-2</button>
+
+    <button onclick="  updateCartQuantity(-3); ">-3</button>
+
+    <button onclick="
+      cartQuantity = 0;console.log('cart was reset.')
+      console.log(`cart quantity: ${cartQuantity}`)
+      ">Reset Cart
+    </button>
+
+    <script>
+      function updateCartQuantity(value){
+        if (cartQuantity+value>10){
+          alert('The cart is full');
+          return;
+        }else if(cartQuantity+value<0){
+          alert('Not enough items in the cart');
+          return;
+        }
+          cartQuantity+=value;
+          console.log(`cart quntity:${cartQuantity}`);
+        
+        
+
+      }
+     let cartQuantity = 0;
+   
+     const variable2= 3;
+    </script>
+  </body>
+</html>

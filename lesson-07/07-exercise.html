@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>07-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    function greet(name){
+     
+      if(!name){
+        console.log('hi these')
+      }else{
+        console.log(`hello ${name}!`)
+      }
+    }
+    function convertToFahrenheit(celsius){
+      console.log((celsius*9/5)+32)
+      
+    }
+    function convertToCelsius(fahrenheit){
+      console.log((fahrenheit-32)*5/9)
+    }
+    function convertTemperature(degrees,unit){
+      if(unit==='C'){
+        console.log(((degrees*9/5)+32)+'F')
+      }else if(unit===`F`){
+        console.log(((degrees-32)*5/9)+'C')
+      }
+    }
+    greet('Kaleab');
+    greet();
+    convertToFahrenheit(5);
+    convertToCelsius(86);
+    convertTemperature(25,'C')
+    convertTemperature(86,'F')
+
+   </script>
+  </body>
+</html>
