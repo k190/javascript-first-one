@@ -2,56 +2,12 @@
 <html>
   <head>
     <title>10-exercises</title>
-      
+    <link 
+    rel="stylesheet"
+    href="styles/10-exercuses.css">
   </head>
   <style>
-    .add-to-cart{
-      background-color: rgb(255,216,20);
-      border: none;
-      border-radius: 30px;
-      width :200px;
-      height :45px;
-      font-size: 20px;
-      
-    }
-    .request-now-button{
-      background-color:black;
-      border:none;
-      border-radius:5px;
-      width:150px;
-      height:45px ;
-      font-size:20px ;
-      color:white;
-      padding:10px;
-      margin-right: 40px;
-    }
-    .schedule-for-later-button{
-      font-size: 20px;
-      font-weight:bold;
-      background-color: rgb(230,230,230);
-      border:none;
-      border-radius:5px;
-      width:200px;
-      height:45px ;
-      font-size:20px ;
-    }
-    .is-toggled{
-      background-color: black;
-      color:white;
-    }
-    .toggle-button{
-      font-size: 20px;
-      font-weight:bold;
-      /*background-color: rgb(230,230,230);*/
-      border:none;
-      border-radius:5px;
-      width:200px;
-      height:45px ;
-      font-size:20px ;
-      cursor: pointer;
-
-    }
-
+   
   </style>
   <body>
    
@@ -62,25 +18,17 @@
       <button class="schedule-for-later-button">schedule for later</button>
     </p>
     <button class="js-button">Test</button>
-    <button onclick="istoggled()"
+    <button onclick="istoggled('.toggle-button')"
     class="is-toggled toggle-button">Gaming</button>
+    <button onclick="istoggled('.music-button')"
+    class="music-button is-toggled">Music</button>
+    <button onclick="istoggled('.tech-button')"
+    class="tech-button is-toggled">Tech</button>
     
-   <script>
-    const chaeckifClass = document.querySelector('.js-button');
-    console.log(chaeckifClass.classList.contains('js-button'));
-    function istoggled(){
-      const chaecking = document.querySelector('.toggle-button')
-      const chaecked =chaecking.classList.contains('is-toggled')
-     
-      if (chaecking.classList.contains('is-toggled')){
-        chaecking.classList.remove('is-toggled');
-      }else{
-        chaecking.classList.add('is-toggled');
-      }
+   <script
+    src="scripts/10-exercises.js"></script>
+   
 
-   }
-  
-
-   </script>
+   
   </body>
 </html>
