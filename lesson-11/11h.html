@@ -8,13 +8,15 @@
     
    <script>
     
-    const nums= [10,20,30,100,85,-2]
+    const nums1= [10,20,30,-100,-85,-2]
     const nums2= [1,2,3,]
-    addArrays(nums,nums2)
-    nums[2]=99;
-    console.log(nums)
-    addOne(nums)
-    addNum(nums,11)
+    addArrays(nums1,nums2)
+    nums1[2]=99;
+    //console.log(nums1)
+    addOne(nums1)
+    addNum(nums1,11)
+   // countPositive(nums1)
+    minMax(nums1)
    function addOne(array){
       let newarray=[]
      for (let i=0; i < array.length; i++) {
@@ -24,18 +26,20 @@
    
 
       }
+      console.log('add one')
       console.log(newarray)
 
     }
    function addNum(array,num){
        let newarray=[]
-     for (let i=0; i < nums.length; i++) {
-       let values= nums[i]
+     for (let i=0; i < array.length; i++) {
+       let values= array[i]
        let newvalues =values + num
        newarray.push(newvalues)
    
 
       }
+      console.log('add num')
       console.log(newarray)
    }
    function addArrays(array1,array2){
@@ -48,9 +52,45 @@
    
 
       }
+      console.log ('new array')
       console.log(newarray)
    }
-  
+   function countPositive(nums){
+     let positive = 0;
+     for (let i=0; i < nums.length; i++) {
+       let value= nums[i]
+       
+      if(value>0){
+       positive++
+
+
+      }
+   
+
+      }
+     console.log(positive)
+   }
+   function minMax(nums){
+    let max = nums[0];
+    let min = nums[0];
+     for (let i=0; i < nums.length; i++){
+        
+      let value = nums[i]
+     if(value<min){
+      min=value
+     }
+      
+    
+     if(value>max){
+      
+     max=value
+     } }
+     
+     console.log(max)
+     console.log(min)
+     console.log(`min:${min},max:${max}`)
+   }
+  minMax([3])
   
  
 
