@@ -7,6 +7,7 @@
   <body>
     
    <script>
+    
     const nums= [10,20,30,100,85]
     nums[2]=99;
     console.log(nums.length)
@@ -32,7 +33,7 @@
     //for(let i=5; i>=0; i--) {
     //console.log(i)
     //}
-    let d=0
+   /* let d=0
     while(d<=10){
       console.log(d);
       d=d+2
@@ -41,7 +42,18 @@
     while(i>=0){
       console.log(i);
       i--;
-    }
+    }*/
+    let newarray=[]
+  for (let i=0; i < nums.length; i++) {
+    let values= nums[i]
+    let newvalues =values + 1
+    newarray.push(newvalues)
+   
+
+  }
+  console.log(newarray)
+ 
+
    </script>
   </body>
 </html>
