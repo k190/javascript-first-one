@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>06-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    
+    const nums= [10,20,30,100,85,-2]
+    const nums2= [1,2,3,]
+    addArrays(nums,nums2)
+    nums[2]=99;
+    console.log(nums)
+    addOne(nums)
+    addNum(nums,11)
+   function addOne(array){
+      let newarray=[]
+     for (let i=0; i < array.length; i++) {
+       let values= array[i]
+       let newvalues =values + 1
+       newarray.push(newvalues)
+   
+
+      }
+      console.log(newarray)
+
+    }
+   function addNum(array,num){
+       let newarray=[]
+     for (let i=0; i < nums.length; i++) {
+       let values= nums[i]
+       let newvalues =values + num
+       newarray.push(newvalues)
+   
+
+      }
+      console.log(newarray)
+   }
+   function addArrays(array1,array2){
+       let newarray=[]
+     for (let i=0; i < array1.length; i++) {
+       let values2= array2[i]
+       let values1= array1[i]
+       let newvalues =values1 + values2
+       newarray.push(newvalues)
+   
+
+      }
+      console.log(newarray)
+   }
+  
+  
+ 
+
+   </script>
+  </body>
+</html>
