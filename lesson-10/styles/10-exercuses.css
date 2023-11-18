@@ -28,10 +28,8 @@
   height:45px ;
   font-size:20px ;
 }
-.is-toggled{
-  background-color: black;
-  color:white;
-}
+
+
 .toggle-button{
   font-size: 20px;
   font-weight:bold;
@@ -43,9 +41,14 @@
   font-size:20px ;
   cursor: pointer;
   margin:40px;
-  
+}
+.is-toggled{
+  background-color: black;
+  color:white;}
+ 
+  /*
 
-}.music-button{
+.music-button{
   font-size: 20px;
   font-weight:bold;
   
@@ -68,3 +71,4 @@
   cursor: pointer;
   margin:40px;
 }
+*/
