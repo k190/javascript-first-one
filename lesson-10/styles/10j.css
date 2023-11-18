@@ -1,0 +1,43 @@
+body {
+ font-family:Arial;
+ color:white;
+ background-color: black;
+
+}
+.desplaying{
+  font-size:45px;
+  margin:10px 0px;
+}
+.numbers-button{
+  background-color: rgba(230, 230, 230, 0.384);
+  border: none;
+  color: white;
+  width:60px;
+  height:60px;
+  cursor:pointer;
+  border-radius: 60px;
+  font-size: 25px;
+  margin-right: 5px;
+}
+.opration-button{
+  background-color:orange;
+  color: white;
+  border: none;
+  font-size: 25px;
+  width:60px;
+  height:60px;
+  cursor:pointer;
+  border-radius: 60px;
+
+}
+.clear-button{
+  background-color: rgba(230, 230, 230, 0.322);
+  border: none;
+  color: white;
+  width:60px;
+  height:60px;
+  cursor:pointer;
+  border-radius: 30px;
+  font-size: 15px;
+
+}
