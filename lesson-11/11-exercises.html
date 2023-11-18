@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>06-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    const nums= [10,20,30,100,85]
+    nums[2]=99;
+    console.log(nums.length)
+    arraySwap(nums)
+    getLastValue(nums)
+    function getLastValue(array){
+      const i = array.length - 1
+      const lastvalue = array[i]
+      console.log(lastvalue)
+
+    }
+    function arraySwap(array){
+      const i = array.length - 1 ;
+      const lastvalue = array[i];
+      const firstvalue = array[0];
+      array[0] = lastvalue;
+      array[i] = firstvalue;
+      console.log(array)
+    }
+    //for( let i=0; i<=10; i=i+2){
+     // console.log(i)
+   // }
+    //for(let i=5; i>=0; i--) {
+    //console.log(i)
+    //}
+    let d=0
+    while(d<=10){
+      console.log(d);
+      d=d+2
+    }
+    let i=5
+    while(i>=0){
+      console.log(i);
+      i--;
+    }
+   </script>
+  </body>
+</html>
