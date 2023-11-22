@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>ll0-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    const array1 = ['hello','world','search','good','hi']
+    const array2 = ['not','found']
+    const array3 = ['hello','search','good','search']
+    console.log(array2)
+    array2.push('game')
+    console.log(array2)
+
+    //checkSearch(array2)
+    //checkSearch(array1)
+    //checkSearch(array3)
+    findIndex(['green','red','blue','red'],'red')
+    findIndex(['green','red','blue','red'],'yellow')
+    console.log(removeEgg(['egg','apple','egg','egg','ham']))
+
+    function checkSearch(arrayofstrings){
+      let index = -1;
+      let i =0;
+      while(i<arrayofstrings.length){
+        const value = arrayofstrings[i]
+        if(value === 'search'){
+          index = i;
+          break;
+        
+        }i++
+      }
+        console.log(index)
+      
+    }
+    function findIndex(array,word){
+      let index = -1;
+      let i =0;
+      while(i<array.length){
+        const value = array[i]
+        if(value === word){
+          index = i;
+          break;
+        
+        }i++
+      }
+        console.log(index)
+    }
+    function removeEgg(foods){
+      const reversedFoods =foods.slice().reverse()
+      const newarray=[]
+      let eggsremoved = 0;
+
+
+     for(let i=0;i<reversedFoods.length;i++){
+      let value = reversedFoods[i]
+      if(value ==='egg'&& eggsremoved<2){
+        eggsremoved++
+        continue
+        
+      }
+      else{
+        newarray.push(value)
+      }
+     }
+     console.log(foods)
+     return newarray.reverse();
+     
+    }
+  
+   
+      
+    
+   </script>
+  </body>
+</html>

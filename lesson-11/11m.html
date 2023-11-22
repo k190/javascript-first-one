@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11i-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    
+    const nums1= [10,20,30,-100,-85,-2]
+    const nums2= [1,2,3,]
+    
+    nums1[2]=99;
+    
+    minMax(nums1)
+  
+   function minMax(nums){
+     const result = {
+       min:null,
+       max:null
+
+      } 
+  
+      for (let i=0; i < nums.length; i++){
+        
+          const value = nums[i]
+       if(result.min === null||value<result.min){
+         result.min=value
+        }
+    
+        if(result.max === null||    value>result.max){
+      
+         result.max=value
+        } 
+      }
+     
+     
+     return result;
+   }
+ console.log( minMax([9,5,8]))
+ function countWords(words){
+    const result = {};
+    for(let i=0; i < words.length; i++){
+     const word = words[i];
+    
+     if(!result[word]){
+       result[word]=1;
+     }else{
+      result[word]++;
+     }
+   }
+   return result;
+ }
+ console.log(countWords(['apple','grape','apple']))
+  
+ 
+
+   </script>
+  </body>
+</html>

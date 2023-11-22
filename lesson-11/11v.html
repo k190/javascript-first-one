@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>11v-exercises</title>
+      
+  </head>
+  <body>
+    
+   <script>
+    const array3 = ['hello','search','good','search','bad']
+    findIndex(array3,'bad')
+    console.log(unique(array3))
+
+   /* for(let i=1;i<=20;i++){
+      let num = i
+      if(num%3===0&&num%5===0){
+        num= 'FizzBuzz'
+      }
+      if(num%3===0){
+        num = 'Fizz'
+      }
+      if(num%5===0){
+        num ='Buzz'
+      }
+      console.log(num)
+    }*/
+    function findIndex(array,word){
+      let index = -1;
+      let i =0;
+      while(i<array.length){
+        const value = array[i]
+        if(value === word){
+          index = i;
+          break;
+        
+        }i++
+      }
+       return index;
+    }
+    function unique(array){
+      const result = []
+      for(let i=0;i<array.length;i++){
+        const word = array[i];
+        if(findIndex(result,word)===-1){
+          result.push(word);
+        }
+        
+      }
+      return result;
+
+    }
+
+   </script>
+  </body>
+</html>

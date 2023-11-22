@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+
+      
+  </head>
+  <body>
+   <!-- <button onclick="finishing()"
+    class="js-finished-button"
+    >Start</button>
+
+    <button onclick="added()">Add to Cart</button>-->
+
+    <button onclick="message++;
+    desplayNotification();">Add</button>
+   
+   
+   <button onclick="
+    if (message > 0){
+      message--;
+      
+     if(message===0){
+      stopNotification();
+    }}
+    ">Remove</button>
+    <!--<p class="js-display-added"></p>-->
+
+  
+  
+  
+  <script>
+    let message = 2;
+    let intervalId;
+    let desplay;
+    desplayNotification();
+   
+  
+   
+
+   
+    function desplayNotification(){
+        if(desplay){
+          return;
+        }
+        desplay = true;
+     intervalId = setInterval(function(){ 
+        if(document.title === 'App'){
+        document.title=`(${message})New messages`
+      }else{
+        document.title='App'
+      }
+
+      },1000)
+    }
+    function stopNotification(){
+      desplay =false;
+      clearInterval(intervalId);
+    document.title = 'App';
+
+    }
+    
+    
+   
+
+  /*  const add = function(){
+      console.log(2+3)
+    }
+    add();
+    add();
+    function runTwice(fun){
+      fun();
+      fun();
+    }
+    runTwice(function(){
+      console.log('12b');
+    });
+    runTwice(add);
+    function finishing(){
+      document.querySelector('.js-finished-button').innerHTML='Loading'
+      setTimeout(function finished(){
+      document.querySelector('.js-finished-button').innerHTML='Finished!'},1000)
+    }
+    let timeoutId;
+    function added(){
+    const display=document.querySelector('.js-display-added')
+    display.innerHTML= 'Added'
+    clearTimeout(timeoutId)
+    timeoutId=setTimeout(function() {
+      display.innerHTML=''
+      
+    }, 2000);
+    }*/
+
+
+   </script>
+  </body>
+</html>
