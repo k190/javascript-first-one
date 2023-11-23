@@ -34,7 +34,28 @@
     let intervalId;
     let desplay;
     desplayNotification();
+    const multiply= (no1,no2)=>console.log(no1*no2);
+   multiply(2,3);
+   multiply(7,10);
+   function countPositive(){
+  
    
+  
+    }
+    function countPositive(nums){
+   
+      let count=0;
+     nums.forEach((value,index)=>{
+        if(value>0){
+          count++
+        }
+      });
+      return count
+      //console.log(count)
+   }
+  console.log(countPositive( [-2,3,-5,7,10]))
+
+  
   
    
 
