@@ -1,0 +1,29 @@
+body{
+  background-color: black;
+  color: white;
+}
+.time{
+  font-size: 200px;
+  margin-top:300px;
+}
+.start-button,.lap-button{
+  font-size: 70px;
+  cursor:pointer;
+  margin-right: 70px;
+  margin-top:350px;
+  border-radius: 100px;
+  width:380px;
+  height:200px;
+}
+.resume-button{
+  background-color:blue;
+  color:white;
+}
+.stop-button{
+  background-color:red;
+  color:white;
+}
+.lap-button{
+  background-color: gray;
+  color:white;
+}
