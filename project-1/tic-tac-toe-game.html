@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Tic-Tac-Toe game </title>
+      
+  </head>
+  <body>
+    
+   <script>
+    let bord = [
+      ["","",""],
+      ["","",""],
+      ["","",""]
+    ];
+    let currentPlayer ="X";
+    let gemeover= false;
+    function printBoard(){
+      console.log("----------");
+      for(let i = 0; i<3;i++){
+        let row ="|";
+        for(let j=0; j<3;j++){
+          row+=bord[i][j]+ " | ";
+        }
+        console.log(row);
+        console.log("----------")
+      }
+    }
+    bord[0][0]=0;bord[0][1]=0;bord[0][2]=0;
+    bord[1][0]=0;bord[1][1]=0;bord[1][2]=0;
+    bord[2][0]=0;bord[2][1]=0;bord[2][2]=0;
+    console.log(bord)
+    printBoard();
+
+   </script>
+  </body>
+</html>
