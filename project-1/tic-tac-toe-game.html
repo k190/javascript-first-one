@@ -8,28 +8,102 @@
     
    <script>
     let bord = [
-      ["","",""],
-      ["","",""],
-      ["","",""]
+      ['','',''],
+      ['','',''],
+      ['','','']
     ];
-    let currentPlayer ="X";
-    let gemeover= false;
+    let currentPlayer ='X';
+    let gameOver= false;
     function printBoard(){
-      console.log("----------");
+      console.log('----------');
       for(let i = 0; i<3;i++){
-        let row ="|";
+        let row ='|';
         for(let j=0; j<3;j++){
-          row+=bord[i][j]+ " | ";
+          row+=bord[i][j]+ ' | ';
+          
         }
+        
         console.log(row);
-        console.log("----------")
+        console.log('----------')
+     
       }
     }
-    bord[0][0]=0;bord[0][1]=0;bord[0][2]=0;
-    bord[1][0]=0;bord[1][1]=0;bord[1][2]=0;
-    bord[2][0]=0;bord[2][1]=0;bord[2][2]=0;
-    console.log(bord)
-    printBoard();
+    function checkWinner(){
+      //check rows
+      for(let i=0; i<3; i++){
+        if(
+          bord[i][0]===bord[i][1]&&
+          bord[i][1]===bord[i][2]&&
+          bord[i][0]!==''
+        ){
+          return bord[i][0];
+        }
+        //check columns
+        else if(
+          bord[0][i]===bord[1][i]&&
+          bord[2][i]===bord[1][i]&&
+          bord[0][i]!==''
+        ){
+          return bord[0][i];
+        } }
+        //check diagonals
+        if(
+          bord[0][0]===bord[1][1]&&
+          bord[0][0]===bord[2][2]&&
+          bord[0][0]!==''||
+          bord[0][2]===bord[1][1]&&
+          bord[0][2]===bord[2][0]&&
+          bord[1][1]!==''
+          
+        ) {
+          return bord[1][1];
+        }
+
+        return null
+      }
+      function isBordFull(){
+        for(let i=0;i<3;i++){
+          for(let j=0;j<3;j++){
+            if(bord[i][j]===''){
+              return false;
+            }
+          }
+        }
+        return true;
+      }
+      function makeamove(row,col){
+        if(bord[row][col]===''&&!gameOver){
+          bord[row][col]=currentPlayer;
+          printBoard();
+          let winner = checkWinner();
+          if(winner){
+            console.log('Player',winner,'wins!')
+            gameOver= true;
+          }else if(isBordFull()){
+            gameOver=true;
+            console.log('it is a tie!')
+          }else{
+            currentPlayer=currentPlayer==='X'?'O':'X';
+            }
+
+        }else{
+          console.log('Invalid move!Try again');
+        }
+
+
+      } makeamove(0,0);
+      makeamove(0,1);
+      makeamove(0,1);
+      makeamove(0,2);
+      makeamove(1,1,);
+      makeamove(2,0);
+      makeamove(2,1);
+      
+    
+    
+
+
+    
 
    </script>
   </body>
